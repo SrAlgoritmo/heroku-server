@@ -3,7 +3,7 @@ from datetime import datetime
 import pytesseract
 import unicodedata
 import connexion
-#import cv2
+import cv2
 
 #importacao para retirar espacos extras nas strings
 import re
