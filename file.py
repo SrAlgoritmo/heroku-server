@@ -44,7 +44,7 @@ def read_image():
     #cv2.imwrite("imagemGray.png", thresh)
 
     #reads text from image
-    text = pytesseract.image_to_string(image, config='-l por')
+    text = pytesseract.image_to_string(image)
     
     #removendo quebras de linha
     text = text.replace("\n"," ")
