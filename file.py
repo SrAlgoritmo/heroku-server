@@ -10,7 +10,7 @@ import re
 
 from PIL import Image
 
-pytesseract.pytesseract.tesseract_cmd = r'env\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'Tesseract-OCR\tesseract.exe'
 
 #alfabeto com caracteres a serem filtrados
 alfabeto = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
