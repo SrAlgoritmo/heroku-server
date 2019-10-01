@@ -3,14 +3,14 @@ from datetime import datetime
 import pytesseract
 import unicodedata
 import connexion
-import cv2
+#import cv2
 
 #importacao para retirar espacos extras nas strings
 import re
 
 from PIL import Image
 
-#pytesseract.pytesseract.tesseract_cmd = r'Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'\Tesseract-OCR\tesseract.exe'
 
 #alfabeto com caracteres a serem filtrados
 alfabeto = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
@@ -44,7 +44,7 @@ def read_image():
     #cv2.imwrite("imagemGray.png", thresh)
 
     #reads text from image
-    text = pytesseract.image_to_string(image)
+    text = pytesseract.image_to_string(image, config='-l por')
     
     #removendo quebras de linha
     text = text.replace("\n"," ")
