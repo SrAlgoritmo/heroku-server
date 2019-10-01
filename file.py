@@ -3,7 +3,7 @@ from datetime import datetime
 import pytesseract
 import unicodedata
 import connexion
-import cv2
+#import cv2
 
 #importacao para retirar espacos extras nas strings
 import re
@@ -26,25 +26,25 @@ def read_image():
 
     #converts formData to image
     image = Image.open(file)
-    image.save("image.png", "PNG")
+    #image.save("image.png", "PNG")
 
     #carregando imagem com cv2 (para orperacoes opencv)
-    img = cv2.imread("image.png")
+    #img = cv2.imread("image.png")
 
     #convertenco imagem para escala de cinza
-    imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    #imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     #aplicando blur na imagem 
-    imgGray = cv2.GaussianBlur(imgGray,(3,3),0)
+    #imgGray = cv2.GaussianBlur(imgGray,(3,3),0)
 
     #tirando ruidos da imagem
-    rect, thresh = cv2.threshold(imgGray,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+    #rect, thresh = cv2.threshold(imgGray,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 
     #salvando imagem editada.
-    cv2.imwrite("imagemGray.png", thresh)
+    #cv2.imwrite("imagemGray.png", thresh)
 
     #reads text from image
-    text = pytesseract.image_to_string(thresh, config='-l por')
+    text = pytesseract.image_to_string(image, config='-l por')
     
     #removendo quebras de linha
     text = text.replace("\n"," ")
