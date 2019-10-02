@@ -10,7 +10,7 @@ import re
 
 from PIL import Image
 
-pytesseract.pytesseract.tesseract_cmd = r'..\Tesseract-OCR\tesseract.exe'
+#pytesseract.pytesseract.tesseract_cmd = r'..\Tesseract-OCR\tesseract.exe'
 #pytesseract.pytesseract.tesseract_cmd = r'https://github.com/SrAlgoritmo/heroku-server/tree/master/Tesseract-OCR/tesseract.exe'
 
 #alfabeto com caracteres a serem filtrados
