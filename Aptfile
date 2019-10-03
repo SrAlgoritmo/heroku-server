@@ -6,3 +6,7 @@ libgif-dev
 build-essential
 g++
 tesseract-ocr
+graphicsmagick
+libpng-dev
+zlib1g-dev
+libjasper-dev
