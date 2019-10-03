@@ -1,4 +1,4 @@
-libpng12.so.0-dev
+http://ftp.us.debian.org/debian/pool/main/libp/libpng/libpng12-0_1.2.50-2+deb8u3_amd64.deb
 libcairo2-dev
 libjpeg8-dev
 libpango1.0-dev
